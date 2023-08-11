@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTT Content - Results</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">OTT Content - Results</h1>
+        <a href="/" class="btn btn-secondary mt-2 mb-4">Go Back</a>
+        <div class="card-columns">
+            {% for item in data %}
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <p class="card-text">Type: {{ item.type }}</p>
+                        <p class="card-text">Release Date: {{ item.release_date }}</p>
+                        <p class="card-text">Rating: {{ item.rating }}</p>
+                        <p class="card-text">Where to Watch: {{ item.where_to_watch }}</p>
+                        <p class="card-text">Language: {{ item.language }}</p>
+                        <p class="card-text">Genre: {{ item.genre }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
